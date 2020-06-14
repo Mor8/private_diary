@@ -167,5 +167,5 @@ LOGGING = {
 }
 
 STATICFILES_DIRS =(
-    os.path.join(BASE_DIR, 'staitc') # 静的ファイルの配置場所を追加
+    os.path.join(BASE_DIR, 'static'), # 静的ファイルの配置場所を追加
 )
