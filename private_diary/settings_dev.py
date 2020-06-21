@@ -6,7 +6,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # ロギングの設定
-LOGGING = { 
+LOGGING = {
     'version': 1, # 1固定
     'disable_existing_loggers': False, # 既存のロガーの有効無効設定
 
@@ -45,3 +45,5 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
