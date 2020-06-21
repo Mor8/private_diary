@@ -1,5 +1,6 @@
 from django import forms
 
+
 class InquiryForm(forms.Form):
     name = forms.CharField(label="name", max_length=30)
     email = forms.EmailField(label='mail address')
