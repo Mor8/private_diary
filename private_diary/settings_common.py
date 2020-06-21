@@ -17,7 +17,6 @@ from django.contrib.messages import constants as messages
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = 'j(fx7heb-y(9xg3=(au+@r4g)d6w+21i$e3)*iy$y^g@$!28cr'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -74,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'private_diary.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -88,7 +85,6 @@ DATABASES = {
         'POST': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -108,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -122,7 +117,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -130,8 +124,8 @@ STATIC_URL = '/static/'
 
 # ロギングの設定
 LOGGING = {
-    'version': 1, # 1固定
-    'disable_existing_loggers': False, # 既存のロガーの有効無効設定
+    'version': 1,  # 1固定
+    'disable_existing_loggers': False,  # 既存のロガーの有効無効設定
 
     # ロガーの設定
     'loggers': {
@@ -151,7 +145,7 @@ LOGGING = {
     'handlers': {
         'console': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler', # コンソールへ出力するハンドラ
+            'class': 'logging.StreamHandler',  # コンソールへ出力するハンドラ
             'formatter': 'dev'
         },
     },
@@ -169,8 +163,8 @@ LOGGING = {
     }
 }
 
-STATICFILES_DIRS =(
-    os.path.join(BASE_DIR, 'static'), # 静的ファイルの配置場所を追加
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),  # 静的ファイルの配置場所を追加
 )
 
 MESSAGE_TAGS = {
@@ -180,3 +174,5 @@ MESSAGE_TAGS = {
     messages.INFO: 'alert alert-info',
 
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
