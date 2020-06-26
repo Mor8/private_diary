@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'diary.apps.DiaryConfig',
-    'accounts.apps.AccountsConfig'
+    'accounts.apps.AccountsConfig',
     
     # to use django-allauth
     'django.contrib.sites',
