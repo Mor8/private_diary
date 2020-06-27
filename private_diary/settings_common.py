@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j(fx7heb-y(9xg3=(au+@r4g)d6w+21i$e3)*iy$y^g@$!28cr'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -206,3 +206,8 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # ログアウトリンクのクリック一発でログアウトする設定
 ACCOUNT_LOGOUT_ON_GET = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
